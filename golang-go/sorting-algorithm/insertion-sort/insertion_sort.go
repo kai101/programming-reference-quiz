@@ -7,24 +7,19 @@ import (
 )
 
 func InsertionSort(arr []int) []int{
-	var min int = 0;
 	var intHolder int;
-	for i := range arr {
-		min = i;
-		
-		for j := i+1 ; j < len(arr) ; j ++ {
-			if(arr[j] < arr[i]){
-				min = j
+	
+	for i := 1 ; i < len(arr); i++ {
+		for j := i-1 ; j >= 0  ; j-- {
+			if(arr[j] > arr[j+1]){
+				intHolder = arr[j+1]
+				arr[j+1] = arr[j]
+				arr[j] = intHolder
+			}else{
+				break;
 			}
+			
 		}
-		
-		//swap
-		if(min != i){
-			intHolder = arr[i]
-			arr[i] = arr[min]
-			arr[min] = intHolder
-		}
-		
 	}
 
 
