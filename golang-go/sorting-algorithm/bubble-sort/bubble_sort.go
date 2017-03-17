@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func bubbleSort(arr []int) []int{
+func BubbleSort(arr []int) []int{
 	for i := len(arr) - 1 ; i > 0 ; i--{
 		for j := 0; j < i; j++   {
 			if(arr[j] > arr[j+1]){
@@ -36,7 +36,7 @@ func main() {
 	fmt.Printf("Before: %v\n", arr)
 	
 	//sorting
-	bubbleSort(slice);
+	BubbleSort(slice);
 	
 	//output after sort
 	fmt.Printf("after:  %v\n", arr)
