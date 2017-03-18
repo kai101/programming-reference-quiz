@@ -5,7 +5,7 @@ Simple bubble sort, probably your first ever sorting algorithm.
 ## Specification
 Worst run time O(n^2)
 
-## Algorithm Explaination
+## Algorithm Explanation
 
 Bubble sort uses an analogy of a big bubble rises from bottom of water to the surface of water. In terms of data, an element with larger value will move to the end of array.
 

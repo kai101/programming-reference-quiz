@@ -6,7 +6,7 @@ Merge sort description TODO
 
 TODO
 
-## Algorithm Explaination
+## Algorithm Explanation
 
 TODO
 

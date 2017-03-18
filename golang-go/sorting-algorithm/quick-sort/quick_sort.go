@@ -6,37 +6,37 @@ import (
 	"time"
 )
 
-func swap(arr []int, i,j int){
-	var temp = arr[i];
-	arr[i] = arr[j];
-	arr[j] = temp;
+func swap(arr []int, i, j int) {
+	var temp = arr[i]
+	arr[i] = arr[j]
+	arr[j] = temp
 }
 
-func quickSort(arr []int, left, right int) []int{
+func quickSort(arr []int, left, right int) []int {
 	var pivot, parIndex int
-	
-	if(left < right){
+
+	if left < right {
 		pivot = right
 		parIndex = left
-		
-		for i := left;i<right;i++{
-			if(arr[i] < arr[pivot]){
-				swap(arr,i,parIndex)
+
+		for i := left; i < right; i++ {
+			if arr[i] < arr[pivot] {
+				swap(arr, i, parIndex)
 				parIndex++
 			}
 		}
-		
-		swap(arr, parIndex,pivot)
-		
-		quickSort(arr, left, parIndex -1)
-		quickSort(arr, parIndex +1 , right)
-	
+
+		swap(arr, parIndex, pivot)
+
+		quickSort(arr, left, parIndex-1)
+		quickSort(arr, parIndex+1, right)
+
 	}
-	return arr;
+	return arr
 }
 
 func QuickSort(arr []int) []int {
-	return quickSort(arr,0,len(arr)-1)
+	return quickSort(arr, 0, len(arr)-1)
 }
 
 func main() {
