@@ -13,10 +13,13 @@ func MergeSort(arr []int) []int {
 	}
 
 	var mid int = len(arr) / 2
-	var left, right []int = make([]int, len(arr[:mid])), make([]int, len(arr[mid:]))
-
+	var left, right []int
+	
 	//make seperate copy of left and right for manipulation on arr.
+	left = make([]int, len(arr[:mid]))
 	copy(left, MergeSort(arr[:mid]))
+	
+	right = make([]int, len(arr[mid:]))
 	copy(right, MergeSort(arr[mid:]))
 
 	var i, j, k int = 0, 0, 0
