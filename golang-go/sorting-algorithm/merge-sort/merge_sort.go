@@ -67,5 +67,5 @@ func main() {
 	result := MergeSort(slice)
 
 	//output after sort
-	fmt.Printf("after:  %v\n", result)
+	fmt.Printf("After:  %v\n", result)
 }

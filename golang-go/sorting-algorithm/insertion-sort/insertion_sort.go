@@ -7,14 +7,12 @@ import (
 )
 
 func InsertionSort(arr []int) []int {
-	var intHolder int
+	//var intHolder int
 
 	for i := 1; i < len(arr); i++ {
 		for j := i - 1; j >= 0; j-- {
 			if arr[j] > arr[j+1] {
-				intHolder = arr[j+1]
-				arr[j+1] = arr[j]
-				arr[j] = intHolder
+				arr[j+1],arr[j] = arr[j],arr[j+1]
 			} else {
 				break
 			}
@@ -45,5 +43,5 @@ func main() {
 	result := InsertionSort(slice)
 
 	//output after sort
-	fmt.Printf("after:  %v\n", result)
+	fmt.Printf("After:  %v\n", result)
 }

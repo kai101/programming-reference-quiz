@@ -39,5 +39,5 @@ func main() {
 	BubbleSort(slice)
 
 	//output after sort
-	fmt.Printf("after:  %v\n", arr)
+	fmt.Printf("After:  %v\n", arr)
 }
