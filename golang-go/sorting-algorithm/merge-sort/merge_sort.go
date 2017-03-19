@@ -17,13 +17,14 @@ func MergeSort(arr []int) []int {
 	
 	//make seperate copy of left and right for manipulation on arr.
 	left = make([]int, len(arr[:mid]))
-	copy(left, MergeSort(arr[:mid]))
+	copy(left, MergeSort(arr[:mid])) //recursive call
 	
 	right = make([]int, len(arr[mid:]))
-	copy(right, MergeSort(arr[mid:]))
+	copy(right, MergeSort(arr[mid:])) //recursive call
 
 	var i, j, k int = 0, 0, 0
 
+	//smart merging by having 2 pointers on left and right and compare them.
 	for (i < len(left)) && (j < len(right)) {
 		if left[i] < right[j] {
 			arr[k] = left[i]
@@ -35,12 +36,14 @@ func MergeSort(arr []int) []int {
 		k++
 	}
 
+	//process the remaining elements in left
 	for i < len(left) {
 		arr[k] = left[i]
 		i++
 		k++
 	}
 
+	//process the remaining elements in right
 	for j < len(right) {
 		arr[k] = right[j]
 		j++

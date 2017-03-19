@@ -7,9 +7,7 @@ import (
 )
 
 func swap(arr []int, i, j int) {
-	var temp = arr[i]
-	arr[i] = arr[j]
-	arr[j] = temp
+	arr[i],arr[j] = arr[j],arr[i]
 }
 
 func quickSort(arr []int, left, right int) []int {
