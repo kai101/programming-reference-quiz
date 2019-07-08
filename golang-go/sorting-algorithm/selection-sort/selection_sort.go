@@ -6,9 +6,9 @@ import (
 	"time"
 )
 
+// SelectionSort function
 func SelectionSort(arr []int) []int {
-	var min int = 0
-	var intHolder int
+	min := 0
 	for i := range arr {
 		min = i
 
@@ -20,9 +20,7 @@ func SelectionSort(arr []int) []int {
 
 		//swap
 		if min != i {
-			intHolder = arr[i]
-			arr[i] = arr[min]
-			arr[min] = intHolder
+			arr[i], arr[min] = arr[min], arr[i]
 		}
 	}
 
