@@ -7,8 +7,8 @@ import (
 func main() {
 	fmt.Printf("Array and Slice are 2 important concept in GO!\n")
 
-	var arrayA [5]int = [5]int{1, 2, 3, 4, 5} //this is literal array.
-	var sliceA []int                          // this is slice
+	var arrayA = [5]int{1, 2, 3, 4, 5} //this is literal array.
+	var sliceA []int                   // this is slice
 
 	fmt.Printf("1. Type of Array is %T while type of Slice is %T\n", arrayA, sliceA)
 	//1. Type of Array is [5]int while type of Slice is []int

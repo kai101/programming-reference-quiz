@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestMergeSort(t *testing.T) {
+func TestHeapSort(t *testing.T) {
 	cases := []struct {
 		in, want []int
 	}{
@@ -14,9 +14,9 @@ func TestMergeSort(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		got := MergeSort(c.in)
+		got := HeapSort(c.in)
 		if !reflect.DeepEqual(got, c.want) {
-			t.Errorf("MergeSort(%v) == %v, want %v", c.in, got, c.want)
+			t.Errorf("HeapSort(%v) == %v, want %v", c.in, got, c.want)
 		}
 	}
 
