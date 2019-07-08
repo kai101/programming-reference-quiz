@@ -19,5 +19,4 @@ func TestInsertionSort(t *testing.T) {
 			t.Errorf("BucketSort(%v) == %v, want %v", c.in, got, c.want)
 		}
 	}
-
 }

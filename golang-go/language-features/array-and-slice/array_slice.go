@@ -34,7 +34,7 @@ func main() {
 
 	arrayA[2] = 1000 //changing the arrayA will show on sliceA and sliceB
 
-	//sliceB is started at index 1 of arrayAi, therefore  arrayA[2] equal to sliceB[1]
+	//sliceB is started at index 1 of arrayA, therefore  arrayA[2] equal to sliceB[1]
 	fmt.Printf("4. Lets check the value of sliceA[2]: %v and sliceB[1]: %v\n", sliceA[2], sliceB[1])
 	//4. Lets check the value of sliceA[2]: 1000 and sliceB[1]: 1000
 
@@ -47,19 +47,21 @@ func main() {
 	//5. Lets check the value of arrayA[2]: 3000 and sliceB[1]: 3000
 
 	//array size are fix, but slice cap
-	//You cant do this
+	//You cant do this on array
 	//arrayA = append(arrayA, 9)
 
 	//but you can append slice, remember slice is a reference to array.
 	sliceA = append(sliceA, 9)
 	fmt.Printf("len=%d cap=%d %v\n", len(sliceA), cap(sliceA), sliceA)
+	//len=5 cap=5 [1 2 3000 4 9]
 
 	//however sliceB is not affected.
 	fmt.Printf("len=%d cap=%d %v\n", len(sliceB), cap(sliceB), sliceB)
+	//len=3 cap=4 [2 3000 4]
 
 	//sliceA cap is 5 and len is 5, what if we append one more number to sliceA
 	sliceA = append(sliceA, 10)
 	fmt.Printf("len=%d cap=%d %v\n", len(sliceA), cap(sliceA), sliceA)
-
+	//len=6 cap=10 [1 2 3000 4 9 10]
 	fmt.Printf("There you go, slice is a reference, and dynamic component for a Array. And do not forget array is fixed length.")
 }
